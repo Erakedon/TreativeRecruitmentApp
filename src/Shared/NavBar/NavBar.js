@@ -11,8 +11,6 @@ class NavBar extends Component {
         this.props.history.push(url);
     }
 
-
-
     render() { 
         return ( 
             <div className="NavBar">

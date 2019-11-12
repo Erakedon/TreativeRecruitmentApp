@@ -40,7 +40,6 @@ render() {
         <Route render={props => <RecentActivityBar {...props} activities={this.state.recentActivities} />} />
 
           <Route component={NavBar} />
-          {/* <Route path="/" exact component={MainPage} /> */}
           <Route path="/userslist" render={props => <UsersList {...props} reportActivity={activity => {this.addActivity(activity)}} />} />
           <Route path="/newuser" render={props => <UserFormPage {...props} reportActivity={activity => {this.addActivity(activity)}} />} />
           <Route path="/edituser" render={props => <UserFormPage {...props} reportActivity={activity => {this.addActivity(activity)}} />} />

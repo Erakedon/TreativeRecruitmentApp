@@ -140,7 +140,6 @@ class AddComment extends Component {
 
         return ( 
             <div className="AddComment">
-                {/* <div className="header">Add comment</div> */}
                 {formFields}
                 <div className="buttonContainer">
                     <Button className="green" onClickHandler={() => {this.submitForm()}}>Add comment</Button>

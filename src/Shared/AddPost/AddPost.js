@@ -5,7 +5,6 @@ import TextAreaField from '../FormFields/TextAreaField/TextAreaField';
 import TextField from '../FormFields/TextField/TextField';
 import Button from '../Button/Button';
 import PostModel from './../../Models/PostModel';
-// import SelectFromListField from '../FormFields/SelectFromListField/SelectFromListField';
 import SelectField from './../FormFields/SelectField/SelectField';
 
 class AddPost extends Component {

@@ -29,7 +29,6 @@ class UserFormPage extends Component {
         const urlData = this.getUrlData();
         if(urlData[0] === "edituser")
             this.getUserData(urlData[1]);
-
     }
 
     getUrlData() {
@@ -121,8 +120,7 @@ class UserFormPage extends Component {
             this.props.reportActivity("userAdd");
         },err => {
             this.props.reportActivity("error");
-        });
-     
+        });     
     }
 
     updateUser() {
@@ -147,8 +145,6 @@ class UserFormPage extends Component {
     }
 
     render() { 
-        // console.log(this.state);
-
         let formFields = [];
         if(this.state.form)
             UserModel.forEach(field => {
