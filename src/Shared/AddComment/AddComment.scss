@@ -1,0 +1,39 @@
+.AddComment {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: rgba(255,255,255,0.1);
+
+    max-width: 290px;
+
+    padding: 5px;
+    margin-top: 5px;        
+    border-radius: 5px;
+
+    .FormField {
+        align-items: flex-start;
+        margin: 2px;
+        font-size: 0.7em;
+    }
+
+    .TextAreaField {
+        width: 100%;
+    }
+
+    .buttonContainer {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: flex-end;
+
+        width: 100%;
+        margin-top: 5px;
+
+        .Button {
+            width: auto;
+            font-size: 0.8em;
+        }
+    }
+}

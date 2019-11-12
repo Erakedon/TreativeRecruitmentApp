@@ -1,0 +1,40 @@
+.TextAreaField {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    min-width: 60%;
+
+    textarea {
+        width: 100%;
+        resize: none;
+
+        font-family: inherit;
+        font-size: 0.95em;
+
+
+        padding: 4px;
+        box-sizing: border-box;
+        
+        border-radius: 8px;
+        border: 2px solid #ccc;
+
+        transition: 0.5s;
+    }
+
+    textarea:focus {
+        outline: none;
+    }
+}
+
+.TextAreaField.error {
+    textarea {
+        border: 2px solid $error-color;
+    }
+}
+
+.TextAreaField.validated {
+    textarea {
+        border: 2px solid $primary-color-dark;
+    }
+}

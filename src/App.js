@@ -1,26 +1,54 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import './style.css';
+import { Route, BrowserRouter } from "react-router-dom";
+import UsersList from './Pages/UsersList/UsersList';
+import NavBar from './Shared/NavBar/NavBar';
+import UserFormPage from './Pages/UserFormPage/UserFormPage';
+import PostsPage from './Pages/PostsPage/PostsPage';
+import RecentActivityBar from './Shared/RecentActivityBar/RecentActivityBar';
+import UserView from './Pages/UserView/UserView';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    recentActivities: []
+  }
+
+  activitiesCounter = 0;
+
+  removeActivity() {
+    let updatedActivities = this.state.recentActivities;
+    updatedActivities.shift();
+
+    this.setState({recentActivities: updatedActivities});
+  }
+
+  addActivity(activity) {
+    let updatedActivities = this.state.recentActivities;
+    updatedActivities.push({type: activity, key: this.activitiesCounter++});
+    
+    this.setState({recentActivities: updatedActivities});
+
+    setTimeout(() => {
+      this.removeActivity();
+    }, 5000);
+  }
+
+render() {
+    return (
+      <div className="App">
+        <BrowserRouter>
+        <Route render={props => <RecentActivityBar {...props} activities={this.state.recentActivities} />} />
+
+          <Route component={NavBar} />
+          {/* <Route path="/" exact component={MainPage} /> */}
+          <Route path="/userslist" render={props => <UsersList {...props} reportActivity={activity => {this.addActivity(activity)}} />} />
+          <Route path="/newuser" render={props => <UserFormPage {...props} reportActivity={activity => {this.addActivity(activity)}} />} />
+          <Route path="/edituser" render={props => <UserFormPage {...props} reportActivity={activity => {this.addActivity(activity)}} />} />
+          <Route path="/viewuser" render={props => <UserView {...props} reportActivity={activity => {this.addActivity(activity)}} />} />
+          <Route path="/" exact render={props => <PostsPage {...props} reportActivity={activity => {this.addActivity(activity)}} />} />
+        </BrowserRouter>
+      </div>
+    );
+  }
 }
-
 export default App;

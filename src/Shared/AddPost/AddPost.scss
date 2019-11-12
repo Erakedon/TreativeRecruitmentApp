@@ -1,0 +1,37 @@
+.AddPost {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: rgba(0,0,0,0.1);
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+
+    padding: 10px;
+    margin-top: 5px;        
+    border-radius: 5px;
+
+    .FormField {
+        align-items: flex-start;
+        margin: 2px;
+    }
+
+    .TextAreaField {
+        width: 100%;
+    }
+
+    .buttonContainer {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: flex-end;
+
+        width: 100%;
+        margin-top: 5px;
+
+        .Button {
+            width: auto;
+            font-size: 0.8em;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.UserView {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+
+    width: 100%;
+
+    .posts {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+    }
+
+    .userData {
+        margin-top: 20px;
+
+        .data {
+            margin-bottom: 3px;
+
+            .type {
+                font-size: 0.7em;
+                color: #999;
+            }
+    
+            .value {
+                font-size: 1.2em;
+    
+            }
+        }
+
+    }
+}

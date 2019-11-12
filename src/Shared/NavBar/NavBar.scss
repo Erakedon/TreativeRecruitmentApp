@@ -1,0 +1,51 @@
+.NavBar {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 100vw;
+    height: 50px;
+
+    background-color: #282828;
+
+    .locations {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: flex-end;
+
+        .location {
+            margin-right: 30px;
+    
+            cursor: pointer;
+        }
+    
+        .location.active {
+            color: #fff;
+            font-weight: 600;
+        }
+    }
+
+    .back {
+        opacity: 1;
+        font-size: 2.3em;
+        margin-left: 20px;
+        transition: 0.5s;
+
+        cursor: pointer;
+    }
+
+    .back.hidden {
+        opacity: 0;
+    }
+
+    .back, .location {
+        color: #999;
+    }
+
+    .back:hover, .location:hover {
+        color: #eee;
+    }
+}

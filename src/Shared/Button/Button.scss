@@ -1,0 +1,43 @@
+.Button {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    color: #ddd;
+
+    min-width: 50px;
+    padding: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 0.95em;
+
+    border-radius: 10px;
+
+    transform: scale(1);
+
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+}
+
+.Button:hover {
+    color: #fff;
+    transform: scale(1.005);
+}
+
+.Button.green {
+    background-color: $primary-color;
+}
+
+.Button.green:hover {
+    background-color: $primary-color-light;
+}
+
+
+.Button.grey {
+    background-color: $grey-color;
+}
+
+.Button.grey:hover {
+    background-color: $grey-color-light;
+}

@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+@import "./colors.scss";
+
+@import "./Pages/Pages.scss";
+
+@import "./Shared/NavBar/NavBar.scss";
+@import "./Shared/Button/Button.scss";
+@import "./Shared/FormFields/FormFields.scss";
+@import "./Shared/FormFields/TextAreaField/TextAreaField.scss";
+@import "./Shared/AddPost/AddPost.scss";
+@import "./Shared/AddComment/AddComment.scss";
+@import "./Shared/RecentActivityBar/RecentActivityBar.scss";
+@import "./Shared/Post/Post.scss";
+
+@import "./Pages/UsersList/UsersList.scss";
+@import "./Pages/UserFormPage/UserPormPage.scss";
+@import "./Pages/PostsPage/PostsPage.scss";
+@import "./Pages/UserView/UserView.scss";
+
+body{
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+    color: #eee;
+    font-size: 16px;
+    width: 100vw;
+    background-color: #444;
+
+    overflow-x: hidden;
+
+    .App {
+        height: 100%;
+        width: 100vw;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 12px;
+    }
+}
