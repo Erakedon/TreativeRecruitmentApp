@@ -35,7 +35,6 @@ class AddPost extends Component {
         const url = "https://rujewitpltest.herokuapp.com/treative/allUsers"
         axios.get(url)
         .then(res => {
-            console.log(res);
             const newUsersList = res.data.map(user => {
                 return {
                     displayName: user.firstName + " " + user.lastName,
@@ -96,7 +95,6 @@ class AddPost extends Component {
     postPost() {
         const url = "https://rujewitpltest.herokuapp.com/treative/post"
         const dataToSent = this.state.form;
-        console.log(dataToSent);
         axios({
             method: 'post',
             url: url,
