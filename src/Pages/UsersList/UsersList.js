@@ -12,7 +12,7 @@ class UsersList extends Component {
     }
 
     getUsersList() {
-        const url = "http://localhost:5000/treative/allUsers"
+        const url = "https://rujewitpltest.herokuapp.com/treative/allUsers"
         axios.get(url)
         .then(res => {
             console.log(res);
@@ -25,7 +25,7 @@ class UsersList extends Component {
     }
 
     deleteUser(id) {
-        const url = "http://localhost:5000/treative/user/" + id
+        const url = "https://rujewitpltest.herokuapp.com/treative/user/" + id
 
         axios({
             method: 'delete',

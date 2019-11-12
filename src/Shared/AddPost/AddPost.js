@@ -33,7 +33,7 @@ class AddPost extends Component {
     }
     
     getUsersList() {
-        const url = "http://localhost:5000/treative/allUsers"
+        const url = "https://rujewitpltest.herokuapp.com/treative/allUsers"
         axios.get(url)
         .then(res => {
             console.log(res);
@@ -95,7 +95,7 @@ class AddPost extends Component {
     }
 
     postPost() {
-        const url = "http://localhost:5000/treative/post"
+        const url = "https://rujewitpltest.herokuapp.com/treative/post"
         const dataToSent = this.state.form;
         console.log(dataToSent);
         axios({

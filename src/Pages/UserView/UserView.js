@@ -25,7 +25,7 @@ class UserView extends Component {
     }
 
     getUserPostsList() {
-        const url = "http://localhost:5000/treative/userPosts/" + this.getUserId();
+        const url = "https://rujewitpltest.herokuapp.com/treative/userPosts/" + this.getUserId();
         axios.get(url)
         .then(res => {
             console.log(res);
@@ -38,7 +38,7 @@ class UserView extends Component {
     }
     
     getUserData() {
-        const url = "http://localhost:5000/treative/user/" + this.getUserId();
+        const url = "https://rujewitpltest.herokuapp.com/treative/user/" + this.getUserId();
         axios.get(url)
         .then(res => {
             this.setState({userData: res.data});

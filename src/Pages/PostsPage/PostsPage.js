@@ -13,7 +13,7 @@ class PostsPage extends Component {
     }
 
     getPostsList() {
-        const url = "http://localhost:5000/treative/allPosts"
+        const url = "https://rujewitpltest.herokuapp.com/treative/allPosts"
         axios.get(url)
         .then(res => {
             console.log(res);

@@ -39,7 +39,7 @@ class UserFormPage extends Component {
     }
 
     getUserData(id) {
-        const url = "http://localhost:5000/treative/user/" + id;
+        const url = "https://rujewitpltest.herokuapp.com/treative/user/" + id;
         axios.get(url)
         .then(res => {
             let userData = {};
@@ -104,7 +104,7 @@ class UserFormPage extends Component {
     }
 
     postUser() {
-        const url = "http://localhost:5000/treative/user"
+        const url = "https://rujewitpltest.herokuapp.com/treative/user"
         const dataToSent = this.state.form;
 
         axios({
@@ -126,7 +126,7 @@ class UserFormPage extends Component {
     }
 
     updateUser() {
-        const url = "http://localhost:5000/treative/user/" + this.getUrlData()[1];
+        const url = "https://rujewitpltest.herokuapp.com/treative/user/" + this.getUrlData()[1];
         const dataToSent = this.state.form;
 
         axios({
