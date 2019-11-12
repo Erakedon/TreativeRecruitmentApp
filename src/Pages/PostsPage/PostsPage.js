@@ -16,7 +16,6 @@ class PostsPage extends Component {
         const url = "https://rujewitpltest.herokuapp.com/treative/allPosts"
         axios.get(url)
         .then(res => {
-            console.log(res);
             const newPostsList = res.data;
             this.setState({postsList: newPostsList});
         }, err => {

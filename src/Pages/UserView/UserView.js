@@ -28,7 +28,6 @@ class UserView extends Component {
         const url = "https://rujewitpltest.herokuapp.com/treative/userPosts/" + this.getUserId();
         axios.get(url)
         .then(res => {
-            console.log(res);
             const newUsersList = res.data;
             this.setState({postsList: newUsersList})
 
@@ -42,7 +41,6 @@ class UserView extends Component {
         axios.get(url)
         .then(res => {
             this.setState({userData: res.data});
-            console.log(this.state);
 
         }, err => {
             this.props.reportActivity("error");

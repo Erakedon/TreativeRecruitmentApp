@@ -88,7 +88,6 @@ class AddComment extends Component {
     postComment() {
         const url = "https://rujewitpltest.herokuapp.com/treative/comment/" + this.props.postId
         const dataToSent = this.state.form;
-        console.log(dataToSent);
         axios({
             method: 'post',
             url: url,

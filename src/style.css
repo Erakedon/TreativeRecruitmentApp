@@ -373,6 +373,18 @@
   color: #fff;
 }
 
+@media (max-width: 400px) {
+  .UsersList table {
+    font-size: 0.8em;
+  }
+  .UsersList table tbody tr td {
+    text-align: left;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+}
 .UserFormPage {
   display: flex;
   flex-flow: column nowrap;

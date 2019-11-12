@@ -15,7 +15,6 @@ class UsersList extends Component {
         const url = "https://rujewitpltest.herokuapp.com/treative/allUsers"
         axios.get(url)
         .then(res => {
-            console.log(res);
             const newUsersList = res.data;
             this.setState({usersList: newUsersList})
 

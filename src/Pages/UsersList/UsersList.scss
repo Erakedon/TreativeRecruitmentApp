@@ -1,5 +1,4 @@
 .UsersList {
-
     table {
         max-width: 95%;
         margin-top: 20px;
@@ -24,6 +23,26 @@
 
                     i:hover {
                         color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .UsersList {
+        table {
+            font-size: 0.8em;
+
+            tbody {
+                tr {
+                    td {
+                        text-align: left;
+                        padding-left: 3px;
+                        padding-right: 3px;
+                        padding-top: 2px;
+                        padding-bottom: 2px;
                     }
                 }
             }
